@@ -1,49 +1,47 @@
- let series = ["Friends", "GOT", "The Office", "HIMYM", 10, true];
+//funcion muestra elementos del arreglo
 
- document.write(series[1]);
+function mostrarArreglos(titulo){
+    document.write("<h5>"+ titulo +"</h5>");
 
- console.log(series.length);
-
- //mostrar todos los elementos de un arreglo con un bucle
- for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>"+series[posicion]);
- }
-
- //agregar elemento al final de un arreglo
-
- series.push("Black Mirror");
-
- document.write("<h5>Agregar elemento al final del arreglo</h5>");
-
- for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>"+series[posicion]); 
+    for (let posicion = 0; posicion < series.length; posicion++) {
+        document.write("<br>" + series[posicion]);
+    }
 }
+
+let series = ["Friends", "GOT", "The Office", "HIMYM", 10, true];
+
+document.write(series[1]);
+
+console.log(series.length);
+
+//mostrar todos los elementos de un arreglo con un bucle
+
+mostrarArreglos("Mostrar todos los elementos de un arreglo con un bucle");
+
+
+//agregar elemento al final de un arreglo
+
+series.push("Black Mirror");
+
+mostrarArreglos("Agregar elemento al final de un arreglo con un bucle");
+
 
 //agregar elemento en posicion particular
- 
-series.splice(1,0,"Death Note");
 
-document.write("<h5>Agregar elemento en posicion 1 del arreglo</h5>");
+series.splice(1, 0, "Death Note");
 
-for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>"+series[posicion]);
-}
+mostrarArreglos("Agregar elemento en posicion 1 del arreglo");
+
 
 //borrar elemento 
-series.splice(3,1);
+series.splice(3, 1);
 
-document.write("<h5>Eliminar elemento en posicion particular del arreglo</h5>");
+mostrarArreglos("Eliminar en posicion particular del arreglo");
 
-for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>"+series[posicion]);
-}
 
 //modificar valor de posicion particular
 series[4] = "Peaky Blinders";
 
-document.write("<h5>Modificar un elemento en posicion particular del arreglo</h5>");
+mostrarArreglos("Modificar elemento en posicion particular del arreglo");
 
-for(let posicion = 0; posicion < series.length; posicion++){
-    document.write("<br>"+series[posicion]);
-}
 
