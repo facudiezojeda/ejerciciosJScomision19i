@@ -1,4 +1,4 @@
-let series = ["Friends", "GOT", "The Office", "HIMYM", 10, true];
+ let series = ["Friends", "GOT", "The Office", "HIMYM", 10, true];
 
  document.write(series[1]);
 
@@ -20,7 +20,7 @@ let series = ["Friends", "GOT", "The Office", "HIMYM", 10, true];
 }
 
 //agregar elemento en posicion particular
-
+ 
 series.splice(1,0,"Death Note");
 
 document.write("<h5>Agregar elemento en posicion 1 del arreglo</h5>");
