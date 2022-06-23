@@ -15,8 +15,18 @@ let usuarioPablo = {
     localidad: "t4000",
     telefono: 3814534634,
     dni: 35568351,
-    estado: true
+    estado: true,
+    //metodos
+    login: function (){
+        //codigo que haga la funcion
+        console.log("estamos logueados");
+    },
+    logout: ()=>{
+        //codigo del logout
+        console.log("cerramos sesion");
+    }
 }
+
 
  //mostrar objetos
 
@@ -33,5 +43,16 @@ let usuarioPablo = {
  usuarioPablo.nivel = 1;
  document.write("<br>Nivel: " + usuarioPablo.nivel);
 
- 
+//mostrar todas las propiedades(claves) de un objeto
+ let claves = (Object.keys(usuarioPablo));
+ console.log(claves);
 
+ for(let posicion = 0; posicion < claves.length; posicion++){
+    document.write("<br>" + claves[posicion]+ ": " + usuarioPablo[claves[posicion]]); 
+ }
+
+
+ //usar o invocar metodos de objeto
+
+ usuarioPablo.login();
+ usuarioPablo.logout();
